@@ -726,3 +726,257 @@ footer {
         padding: 30px 20px;
     }
     }
+
+#home,
+.home-section {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 75% 25%, rgba(188, 42, 255, 0.20), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(104, 0, 255, 0.16), transparent 35%),
+        linear-gradient(135deg, #050008 0%, #100018 50%, #190021 100%);
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#home::before,
+.home-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(188, 35, 255, 0.04) 50%,
+            transparent 100%
+        );
+
+    pointer-events: none;
+}
+
+#home::after,
+.home-section::after {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: -150px;
+
+    border: 1px solid rgba(220, 71, 255, 0.25);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 40px rgba(185, 0, 255, 0.10),
+        0 0 100px rgba(185, 0, 255, 0.08);
+
+    pointer-events: none;
+}
+
+#home .home-logo,
+.home-section .home-logo,
+#home > img,
+.home-section > img {
+    display: none !important;
+}
+
+#home .home-content,
+.home-section .home-content {
+    position: relative;
+    z-index: 5;
+    max-width: 750px;
+}
+
+#home .home-label,
+.home-section .home-label {
+    margin-bottom: 18px;
+
+    color: #e15aff;
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 8px rgba(221, 73, 255, 0.8),
+        0 0 20px rgba(221, 73, 255, 0.4);
+}
+
+#home h1,
+.home-section h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(42px, 7vw, 82px);
+    font-weight: 900;
+
+    line-height: 0.95;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.25),
+        0 0 25px rgba(210, 55, 255, 0.45),
+        0 0 55px rgba(170, 0, 255, 0.25);
+}
+
+#home .college-name,
+.home-section .college-name {
+    margin-top: 15px;
+
+    color: #d5c8dc;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 6px;
+}
+
+#home .home-line,
+.home-section .home-line {
+    width: 75px;
+    height: 3px;
+
+    margin: 27px 0;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #ff55ff,
+        #a52cff
+    );
+
+    box-shadow:
+        0 0 8px #d632ff,
+        0 0 20px rgba(205, 35, 255, 0.6);
+}
+
+#home .welcome-text,
+.home-section .welcome-text {
+    max-width: 570px;
+
+    margin: 0;
+
+    color: #c7b9ce;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+
+#home .explore-btn,
+.home-section .explore-btn {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 32px;
+    padding: 15px 26px;
+
+    border: 1px solid rgba(222, 70, 255, 0.8);
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(172, 0, 255, 0.35),
+            rgba(65, 0, 90, 0.45)
+        );
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 0 15px rgba(207, 42, 255, 0.25),
+        inset 0 0 15px rgba(225, 61, 255, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+#home .explore-btn span,
+.home-section .explore-btn span {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+#home .explore-btn:hover,
+.home-section .explore-btn:hover {
+    transform: translateY(-4px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(205, 0, 255, 0.55),
+            rgba(93, 0, 125, 0.55)
+        );
+
+    box-shadow:
+        0 0 20px rgba(220, 48, 255, 0.55),
+        0 0 45px rgba(169, 0, 255, 0.25);
+}
+
+#home .explore-btn:hover span,
+.home-section .explore-btn:hover span {
+    transform: translateX(5px);
+}
+
+#home .home-decoration,
+.home-section .home-decoration {
+    position: absolute;
+
+    right: 8%;
+    bottom: 10%;
+
+    width: 280px;
+    height: 280px;
+
+    pointer-events: none;
+}
+
+#home .glow-circle,
+.home-section .glow-circle {
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    right: 0;
+    bottom: 0;
+
+    border: 1px solid rgba(218, 70, 255, 0.25);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 50px rgba(181, 0, 255, 0.12),
+        inset 0 0 50px rgba(181, 0, 255, 0.08);
+
+    animation: homePulse 4s ease-in
